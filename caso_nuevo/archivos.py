@@ -9,7 +9,7 @@ def despliega_uno(elemento):
 
         
 def despliega_todos(ruta=datos.ruta):
-    with open(ruta, 'r') as archivo:
+    with open(ruta, 'r') as archivo:    #'r' para modo lectura y cierre automáticamente al archivo
         contador = 0
         for alumno in archivo:
             alumno = eval(alumno)
@@ -19,5 +19,5 @@ def despliega_todos(ruta=datos.ruta):
         
         
 def agrega_uno(elemento, ruta=datos.ruta):
-    with open(ruta, 'a') as archivo:
+    with open(ruta, 'a') as archivo:        #'a' para escribir al final del archivo y cierre automáticamente al archivo
         archivo.write(str(elemento) + '\n')
