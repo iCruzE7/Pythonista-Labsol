@@ -12,13 +12,13 @@ def reglas(dato, campo):
         return False
     elif (campo in ("Nombre", "Primer Apellido") and (dato == "")):
         return False
-    elif campo == "Segundo Apellido" and dato == "":
+    elif campo == "Segundo Apellido" and dato == "":    #Si se deja en blanco
         while True:
             mensaje = "No ha ingresado el segundo apellido. ¿Es correcto? S/N: "
             confirma = input(mensaje)
-            if confirma.upper() in ("S", "N"):
+            if confirma.upper() in ("S", "N"):  #Si teclea s ó n
                 respuesta = True
-                if confirma.upper() == "N":
+                if confirma.upper() == "N":     #Si teclea n
                     respuesta = False
                 return respuesta
     else:
